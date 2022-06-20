@@ -21,7 +21,7 @@ public class ToolController {
         return ResponseEntity.ok(toolService.listAll());
     }
 
-    @GetMapping
+    @GetMapping(path = "/tag")
     public ResponseEntity<List<ToolResponse>> findByTag(@RequestParam String tag) {
         return ResponseEntity.ok(toolService.findByTag(tag));
     }
