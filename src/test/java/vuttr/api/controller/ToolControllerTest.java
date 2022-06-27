@@ -41,7 +41,6 @@ class ToolControllerTest {
     @Test
     @Disabled
     void listAllError() {
-        //given, when, then
         var response = toolController.listAll();
 
         BDDMockito.when(toolServiceMock.listAll()).thenThrow(new RuntimeException());
@@ -82,4 +81,5 @@ class ToolControllerTest {
         Assertions.assertThat(response).isNotNull();
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
+
 }
